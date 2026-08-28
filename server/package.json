@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
+    "build": "node --check src/index.js && node --check src/db.js && node --check src/queries.js && node --check src/seed.js",
     "start": "node src/index.js"
   },
   "dependencies": {
