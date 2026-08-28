@@ -31,7 +31,7 @@ Install and configure each project independently:
 ```powershell
 cd server
 npm install
-Copy-Item .env.example .env
+prepare .env
 npm run dev
 ```
 
@@ -40,7 +40,7 @@ In a second terminal:
 ```powershell
 cd client
 npm install
-Copy-Item .env.example .env
+prepare .env
 npm run dev
 ```
 
@@ -62,20 +62,6 @@ The server project expects a Neo4j-compatible CognoDB instance that exposes a se
 8. Run `POST /api/seed` once to create constraints and load the demonstration graph.
 
 The exact console labels may vary by CognoDB account/version; the required values are the secure Bolt URI, username, and password. Put these only in `server/.env`; never put them in the client project or source control.
-
-## Separate deployment
-
-Deploy `server/` and `client/` as two independent services.
-
-For the backend service, use `server` as the working directory, run `npm install`, and start with `npm start`. Configure `server/.env` values for `PORT`, `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`, and `CORS_ORIGIN`. Set `CORS_ORIGIN` to the deployed frontend origin, for example `https://app.example.com`.
-
-For the frontend static service, use `client` as the working directory, run `npm install` and `npm run build`, and serve `client/dist`. Set `client/.env` before building:
-
-```env
-VITE_API_URL=https://api.example.com
-```
-
-`VITE_API_URL` is intentionally public because it is compiled into browser JavaScript. It must contain only the backend URL; Neo4j credentials belong exclusively to the backend.
 
 ## API
 
@@ -125,11 +111,3 @@ Add the final UI screenshots here before submission. Suggested captures:
 1. `docs/screenshots/empty-profile.png` — landing state before allergens are selected.
 2. `docs/screenshots/filtered-recipes.png` — selected allergen profile and filtered results.
 3. `docs/screenshots/recipe-safety-details.png` — a recipe showing conflicts and substitutes.
-
-Take the screenshots from the running React client at `http://localhost:5173` after the final visual polish.
-
-## Demo dataset
-
-Use [docs/demo-data-and-questions.md](docs/demo-data-and-questions.md) for the included sample entities, the seed command, recommended live questions, and expected answers during a presentation.
-
-For nine copy-ready client-entered recipes, use [docs/nine-recipes-for-client.md](docs/nine-recipes-for-client.md).
