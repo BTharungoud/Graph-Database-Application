@@ -44,8 +44,6 @@ prepare .env
 npm run dev
 ```
 
-Leave `client/.env` as `VITE_API_URL=` for local development. Open `http://localhost:5173`, then seed the demonstration graph with `POST http://localhost:4000/api/seed`.
-
 The frontend includes a small demo fallback, so its layout remains inspectable when Neo4j is unavailable. Live results replace it automatically after the API connects.
 
 ## Create and configure a CognoDB instance
