@@ -1,0 +1,1 @@
+.pagination{display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 6px;font:11px 'DM Mono',monospace;color:#667269}.pagination button{border:1px solid #d6dfd3;background:#fff;color:#36552a;border-radius:7px;padding:8px 11px;font:11px 'DM Mono',monospace;cursor:pointer}.pagination button:disabled{opacity:.45;cursor:not-allowed}
