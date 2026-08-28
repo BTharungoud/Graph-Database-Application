@@ -106,8 +106,8 @@ The safe-recipe query uses `all(...)` over the selected allergen list, so a reci
 
 ## UI screenshots
 
-Add the final UI screenshots here before submission. Suggested captures:
+Added the final UI screenshots here before submission:
 
-1. `docs/screenshots/empty-profile.png` — landing state before allergens are selected.
-2. `docs/screenshots/filtered-recipes.png` — selected allergen profile and filtered results.
-3. `docs/screenshots/recipe-safety-details.png` — a recipe showing conflicts and substitutes.
+1. `screenshots/init-view.png` — landing state before allergens are selected.
+2. `screenshots/filtered-recipes.png` — selected allergen profile and filtered results.
+3. `screenshots/recipe-safety-details.png` — a recipe showing conflicts and substitutes.
